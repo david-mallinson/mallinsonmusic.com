@@ -81,6 +81,18 @@
 		<!--end tally pop-up, email sign up form script -->
 
 
+
+		<!-- Apply random cursor on page load to all elements -->
+		<script>
+
+		window.onload = function() {
+		const randomCursor = getRandomCursor();
+		document.querySelectorAll('*').forEach(function(element) {
+			element.style.cursor = 'url(' + randomCursor + '), auto';
+		</script>
+		<!-- End apply random cursor on page load to all elements -->
+
+
 		
 	</head>
 	<body>
@@ -91,6 +103,39 @@
 		height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 		<!-- End Google Tag Manager (noscript) -->
 		
+
+
+		<!-- Script to randomly change cursor -->
+		 <script>
+			// Array of cursor icons
+			const cursorIcons = [
+				'images/icons/gummy48_1.ico',   // Replace with your actual icon paths
+				'images/icons/gummy48_2.ico',
+				'images/icons/gummy48_3.ico',
+				'images/icons/gummy48_4.ico',
+				'images/icons/gummy48_5.ico',
+				'images/icons/gummy48_6.ico',
+				'images/icons/gummy48_7.ico',
+				'images/icons/crush.ico'	
+			];
+	
+			// Function to get a random cursor
+			function getRandomCursor() {
+				const randomIndex = Math.floor(Math.random() * cursorIcons.length);
+				return cursorIcons[randomIndex];
+			}
+	
+			// Apply random cursor on page load
+			window.onload = function() {
+				const randomCursor = getRandomCursor();
+				document.body.style.cursor = 'url(' + randomCursor + '), auto';
+			};
+		</script>
+		<!-- End script to randomly change cursor -->
+
+
+
+
 		
 
 		<!-- Header -->
